@@ -13,6 +13,12 @@
 <body>
     <div class="game-container">
         <canvas id="game"></canvas>
+        <div class="winner-message">
+            <p class="final-message">You Win!</p>
+        </div>
+        <div class="loser-message">
+            <p class="final-message">Game Over</p>
+        </div>
         <p class="countdown"></p>
         <div class="btns">
             <button id="up">Up</button>
@@ -22,10 +28,10 @@
             <button id="restart">restart</button>
         </div>
         <div class="messages">
-            <p>Lives: <span id="lives"></span></p>
-            <p>Time ⏰: <span id="time"></span></p>
-            <p>Record 🏁:<span id="record"></span></p>
-            <p id="result"></p>
+            <p class="stats">Lives: <span id="lives"></span></p>
+            <p class="stats">Time ⏰: <span id="time"></span></p>
+            <p class="stats">Record 🏁:<span id="record"></span></p>
+            <p class="stats" id="result"></p>
         </div>
     </div>
     <script src="./maps.js"></script>

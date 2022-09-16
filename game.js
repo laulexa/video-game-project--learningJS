@@ -65,6 +65,7 @@ function startGame() {
   game.textAlign = 'end';
   
   const map = maps[level];
+//   console.log(map)
   if (!map) {
     gameWin();
     return;
@@ -291,5 +292,5 @@ function moveByKeys (event) {
 
     }
   function collision() {
-      setTimeout()
+    //   setTimeout()
     }
