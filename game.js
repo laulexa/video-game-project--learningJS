@@ -47,8 +47,8 @@ function setCanvasSize() {
   }
   canvasSize = Number(canvasSize.toFixed(0));
   
-  canvas.setAttribute('width', canvasSize);
-  canvas.setAttribute('height', canvasSize);
+  canvas.setAttribute('width', fixNumber(canvasSize));
+  canvas.setAttribute('height', fixNumber(canvasSize));
   
   elementsSize = fixNumber(canvasSize / 10);
   
@@ -62,7 +62,7 @@ function setCanvasSize() {
 function startGame() {
   console.log({ canvasSize, elementsSize });
   console.log(window.innerWidth, window.innerHeight);
-  game.font = elementsSize + 'px Verdana';
+  game.font = fixNumber(elementsSize) + 'px Verdana';
   game.textAlign = 'end';
   
   const map = maps[level];
@@ -286,15 +286,15 @@ function moveByKeys (event) {
   }
   function restartGame() {
     console.log('restart game');
-    countdown()
     level = 0;
     lives = 3;
-    timeStart= undefined;
     pResult.innerHTML = '';
     playerPosition.x = undefined;
     playerPosition.y = undefined;  
-      setTimeout(startGame, 3000);
-    }
+    setTimeout(startGame, 3000);
+    countdown()
+    timeStart= undefined;
+}
 
   function victory() {
 
