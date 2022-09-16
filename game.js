@@ -18,7 +18,7 @@ let level = 0;
 let lives = 3;
 
 let timeStart;
-let timePlayer;
+let playerTime;
 let timeInterval;
 
 
@@ -26,10 +26,12 @@ const playerPosition = {
   x: undefined,
   y: undefined,
 };
+
 const giftPosition = {
   x: undefined,
   y: undefined,
 };
+
 let enemyPositions = [];
 
 window.addEventListener('load', setCanvasSize);
@@ -41,9 +43,9 @@ function fixNumber(n) {
 
 function setCanvasSize() {
   if (window.innerHeight > window.innerWidth) {
-    canvasSize = window.innerWidth * 0.7;
+    canvasSize = window.innerWidth * 0.6;
   } else {
-    canvasSize = window.innerHeight * 0.7;
+    canvasSize = window.innerHeight * 0.6;
   }
   canvasSize = Number(canvasSize.toFixed(0));
   
@@ -190,11 +192,12 @@ function showTime() {
   if(timeStart == undefined) {
     spanTime.innerHTML = 0;
   } else {
-    spanTime.innerHTML = Date.now() - timeStart;
+    //spanTime.innerHTML = Date.now() - timeStart;
+    spanTime.innerHTML = ((Date.now() - timeStart)/1000).toFixed(2) + " S";
   }
 }
-function showRecord() {
-  spanRecord.innerHTML = localStorage.getItem('record_time');
+function showRecord() {  
+  spanRecord.innerHTML = localStorage.getItem('record_time') + ' S';
 }
 
   //rowI and colI are the index
@@ -224,7 +227,7 @@ function moveByKeys (event) {
   function deleteRecords() {
     console.log('record deleted')
     localStorage.removeItem('record_time');
-    spanRecord.innerText = ''
+    spanRecord.innerText = '0'
   }
 
   function moveUp() {
