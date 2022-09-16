@@ -5,11 +5,12 @@ const rightButton = document.querySelector ('#right');
 const leftButton = document.querySelector ('#left');
 const downButton = document.querySelector ('#down');
 const restartButton = document.querySelector ('#restart');
-const spanLives = document.querySelector('#lives')
+const deleteRecord = document.querySelector('#delete-record');
+const spanLives = document.querySelector('#lives');
 const spanTime = document.querySelector('#time');
 const spanRecord = document.querySelector('#record');
 const pResult = document.querySelector('#result');
-const countdownText = document.querySelector('.countdown')
+const countdownText = document.querySelector('.countdown');
 
 let canvasSize;
 let elementsSize;
@@ -205,6 +206,7 @@ function showRecord() {
       // }
     
 window.addEventListener('keydown', moveByKeys);
+deleteRecord.addEventListener('click', deleteRecords);
 upButton.addEventListener('click', moveUp);
 rightButton.addEventListener('click', moveRight);
 leftButton.addEventListener('click', moveLeft);
@@ -218,6 +220,12 @@ function moveByKeys (event) {
    else if (event.key == 'ArrowDown') moveDown();
 }
   //console.log(event)
+
+  function deleteRecords() {
+    console.log('record deleted')
+    localStorage.removeItem('record_time');
+    spanRecord.innerText = ''
+  }
 
   function moveUp() {
     console.log('Moving up');

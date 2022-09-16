@@ -13,10 +13,10 @@
 <body>
     <div class="game-container">
         <canvas id="game"></canvas>
-        <div class="winner-message">
+        <div class="winner-message inactive">
             <p class="final-message">You Win!</p>
         </div>
-        <div class="loser-message">
+        <div class="loser-message inactive">
             <p class="final-message">Game Over</p>
         </div>
         <p class="countdown"></p>
@@ -25,7 +25,8 @@
             <button id="left">Left</button>
             <button id="right">Right</button>
             <button id="down">Down</button>
-            <button id="restart">restart</button>
+            <button id="restart" class="restart-delete-btn">Restart</button>
+            <button id="delete-record" class="restart-delete-btn">Delete Record</button>
         </div>
         <div class="messages">
             <p class="stats">Lives: <span id="lives"></span></p>

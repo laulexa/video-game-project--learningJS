@@ -31,53 +31,53 @@ const emojis = {
     -XXXXXXXXX
     OXXXXXXXXX
   `);
+//   maps.push(`
+//     O--XXXXXXX
+//     X--XXXXXXX
+//     XX----XXXX
+//     X--XX-XXXX
+//     X-XXX--XXX
+//     X-XXXX-XXX
+//     XX--XX--XX
+//     XX--XXX-XX
+//     XXXX---IXX
+//     XXXXXXXXXX
+//     `);
+//   maps.push(`
+//     I-----XXXX
+//     XXXXX-XXXX
+//     XX----XXXX
+//     XX-XXXXXXX
+//     XX-----XXX
+//     XXXXXX-XXX
+//     XX-----XXX
+//     XX-XXXXXXX
+//     XX-----OXX
+//     XXXXXXXXXX
+//   `);
+//     maps.push(`
+//     O--------X
+//     XXXXXXXX-X
+//     XXXX---X-X
+//     XXXX-X---X
+//     XXXX-XXXXX
+//     XXXX-----X
+//     XXXXXXXX-X
+//     XXX---XX-X
+//     ----X-XX-X
+//     IXXXX----X
+//     `);
   maps.push(`
-    O--XXXXXXX
-    X--XXXXXXX
-    XX----XXXX
-    X--XX-XXXX
-    X-XXX--XXX
-    X-XXXX-XXX
-    XX--XX--XX
-    XX--XXX-XX
-    XXXX---IXX
-    XXXXXXXXXX
-    `);
-  maps.push(`
-    I-----XXXX
-    XXXXX-XXXX
-    XX----XXXX
-    XX-XXXXXXX
-    XX-----XXX
-    XXXXXX-XXX
-    XX-----XXX
-    XX-XXXXXXX
-    XX-----OXX
-    XXXXXXXXXX
-  `);
-  maps.push(`
-  O--------X
-  XXXXXXXX-X
-  XXXX---X-X
-  XXXX-X---X
-  XXXX-XXXXX
-  XXXX-----X
-  XXXXXXXX-X
-  XXX---XX-X
-  ----X-XX-X
-  IXXXX----X
-`);
-  maps.push(`
+    WWWWWWWWWW
+    WWWWWWWWWW
+    WWWWWWWWWW
+    WWWWWWWWWW
+    WWWWWWWWWW
+    WWWWWWWWWW
+    WWWWWWWWWW
+    WWWWWWWWWW
+    WWWWWWWWWW
     SWWWWWWWWW
-    WWWWWWWWWW
-    WWWWWWWWWW
-    WWWWWWWWWW
-    WWWWWWWWWW
-    WWWWWWWWWW
-    WWWWWWWWWW
-    WWWWWWWWWW
-    WWWWWWWWWW
-    WWWWWWWWWW
   `);
 
 console.log(maps)

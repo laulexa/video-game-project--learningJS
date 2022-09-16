@@ -69,14 +69,19 @@ body {
   button:not(:last-child) {
     margin-right: 10px;
   }
-   #restart {
+   .restart-delete-btn {
     background-color: #82B700;
     border-color: #ff6600;
+    font-weight: bold;
+    font-size: 10px;
+    padding: 5px 0 5px;
+    height: 50px;
+
   }
   .messages {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 auto;
+    margin: 10px auto;
     width: 80%;
     max-width: 460px;
   }
@@ -97,6 +102,6 @@ body {
   @media (max-width: 440px) {
     button { margin: 5px 0 5px; padding: 10px 20px; }
     #up, #down { margin-left: 100%; margin-right: 100%; }
-    #restart { margin-top: 30px;}
+    #restart-delete-btn { margin: 15px 0 15px;}
     .messages {text-align: center;}
   }
