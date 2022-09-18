@@ -92,8 +92,8 @@ function startGame() {
   mapRowCols.forEach((row, rowI) => {
     row.forEach((col, colI) => {
       const emoji = emojis[col];
-      const posX = fixNumber(elementsSize * (colI + 1.1));
-      const posY = fixNumber(elementsSize * (rowI + 1.1));
+      const posX = fixNumber(elementsSize * (colI + 1.2));
+      const posY = fixNumber(elementsSize * (rowI + 1));
 
       if (col == 'O') {
         if (!playerPosition.x && !playerPosition.y) {
