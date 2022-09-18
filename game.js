@@ -43,13 +43,27 @@ function fixNumber(n) {
 
 function setCanvasSize() {
   if (window.innerHeight > window.innerWidth) {
-    canvasSize = window.innerWidth * 0.6;
+    if(window.innerWidth >= 937){
+        console.log("Window.innerWidth greater than 937")
+        canvasSize = window.innerWidth * 0.6;
+    } else if(window.innerWidth >= 413){
+        canvasSize = window.innerWidth * 0.7;
+    } else {
+        canvasSize = window.innerWidth * 0.8;
+    }
   } else {
-    canvasSize = window.innerHeight * 0.6;
+    if(window.innerHeight >= 937){
+        console.log("Window.innerHeight greater than 937")
+        canvasSize = window.innerHeight * 0.6;
+    } else if(window.innerHeight >= 413){
+        canvasSize = window.innerHeight * 0.7;
+    } else {
+        canvasSize = window.innerHeight * 0.8;
+    }
   }
   canvasSize = Number(canvasSize.toFixed(0));
   
-  canvas.setAttribute('width', fixNumber(canvasSize));
+  canvas.setAttribute('width', fixNumber(canvasSize)); //937
   canvas.setAttribute('height', fixNumber(canvasSize));
   
   elementsSize = fixNumber(canvasSize / 10);
