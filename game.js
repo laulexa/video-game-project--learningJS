@@ -43,30 +43,16 @@ function fixNumber(n) {
 
 function setCanvasSize() {
   if (window.innerHeight > window.innerWidth) {
-    if(window.innerWidth >= 937){
-        console.log("Window.innerWidth greater than 937")
-        canvasSize = window.innerWidth * 0.6;
-    } else if(window.innerWidth >= 413){
-        canvasSize = window.innerWidth * 0.7;
-    } else {
-        canvasSize = window.innerWidth * 0.8;
-    }
+        canvasSize = fixNumber(window.innerWidth * 0.6);
   } else {
-    if(window.innerHeight >= 937){
-        console.log("Window.innerHeight greater than 937")
-        canvasSize = window.innerHeight * 0.6;
-    } else if(window.innerHeight >= 413){
-        canvasSize = window.innerHeight * 0.7;
-    } else {
-        canvasSize = window.innerHeight * 0.8;
-    }
+        canvasSize = fixNumber(window.innerHeight * 0.6)
   }
   canvasSize = Number(canvasSize.toFixed(0));
   
-  canvas.setAttribute('width', fixNumber(canvasSize)); //937
+  canvas.setAttribute('width', fixNumber(canvasSize)); 
   canvas.setAttribute('height', fixNumber(canvasSize));
   
-  elementsSize = fixNumber(canvasSize / 10);
+  elementsSize = fixNumber(canvasSize / 10) -1;
   
   playerPosition.x = undefined;
   playerPosition.y = undefined;
@@ -80,6 +66,7 @@ function startGame() {
   console.log(window.innerWidth, window.innerHeight);
   game.font = fixNumber(elementsSize) + 'px Verdana';
   game.textAlign = 'end';
+  
   
   const map = maps[level];
 //   console.log(map)
@@ -105,7 +92,7 @@ function startGame() {
   mapRowCols.forEach((row, rowI) => {
     row.forEach((col, colI) => {
       const emoji = emojis[col];
-      const posX = fixNumber(elementsSize * (colI + 1));
+      const posX = fixNumber(elementsSize * (colI + 1.2));
       const posY = fixNumber(elementsSize * (rowI + 1));
 
       if (col == 'O') {
@@ -148,7 +135,7 @@ function movePlayer() {
     levelFail();
   }
 
-  game.fillText(emojis['PLAYER'], playerPosition.x, playerPosition.y);
+  game.fillText(emojis['PLAYER'], fixNumber(playerPosition.x), fixNumber(playerPosition.y));
   
 }
 
