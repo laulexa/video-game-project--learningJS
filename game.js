@@ -11,6 +11,7 @@ const spanTime = document.querySelector('#time');
 const spanRecord = document.querySelector('#record');
 const pResult = document.querySelector('#result');
 const countdownText = document.querySelector('.countdown');
+const gameOverBanner = document.querySelector(".loser-message")
 
 let canvasSize;
 let elementsSize;
@@ -138,6 +139,13 @@ function movePlayer() {
   game.fillText(emojis['PLAYER'], fixNumber(playerPosition.x), fixNumber(playerPosition.y));
   
 }
+
+// function gameOver() {
+//   canvas.classList.add('inactive');
+//   gameOverBanner.classList.remove('inactive')
+//   spanLives.innerText = 'Game Over'
+//   clearInterval(timeInterval);
+// }
 
 function winningLevel() {
   console.log('Level up');
@@ -306,3 +314,4 @@ function moveByKeys (event) {
   function collision() {
     //   setTimeout()
     }
+
